@@ -1,38 +1,252 @@
-.App {
-  text-align: center;
+html{
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  list-style: none;
+}
+/* font-family: 'Odibee Sans', cursive;
+font-family: 'Pattaya', sans-serif; */
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 100vh;
+  grid-template-areas: "l d"
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.Welcome{
+  background: #8C030E;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  grid-area: l;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 4rem;
+
+}
+.Welcome h1{
+  font-family: 'Pattaya', sans-serif;
+  color: #260104;
+  font-weight: 250;
+  font-size: 7rem;
+  letter-spacing: 4px;
+  text-shadow: 2px 3px 3px white;
+}
+
+
+.Welcome p{
+  font-family: 'Odibee Sans', cursive;
   color: white;
+  font-weight: 100;
+  font-size: 5rem;
+  text-align: center;
+  width: 29rem;
+
+  letter-spacing: 2px;
+  text-shadow: 2px 3px 1px black;
 }
 
-.App-link {
-  color: #61dafb;
+.link-social {
+  margin-top: 4rem;
+}
+.link-social a{
+  font-family: 'Odibee Sans', cursive;
+  font-weight: 100;
+  margin-left: 20px;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.link-social a:nth-child(1){
+  background: #0A66C2;
+  color: white;
+  padding: 1rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  border-radius: 8px;
+}
+
+.link-social a:nth-child(2){
+  background: #24292E;
+  color: white;
+  padding: 1rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  border-radius: 8px;
+}
+
+
+/* Conteudo */
+
+.conteudo{
+  background: #ece5e5;
+  grid-area: d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  /* background: #EEDAC2; */
+  background: #0D0D0D;
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 1px 3px 7px black;
+}
+
+
+.card select{
+  width: 22rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+
+  font-family: 'Pattaya', sans-serif;
+  font-size: 1.6rem;
+  color:  #8C030E;
+  align-items: center;
+  justify-content:center;
+  display: flex;
+  padding-left: 20px;
+}
+
+
+/* Add todo */
+.input-todo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding-left: 20px;
+  /* padding-right: 20px;   */
+  
+  background: white;
+  width: 22rem;
+  height: 4rem;
+  border-radius: 10px;
+}
+
+.input-todo input{
+  border: none;
+  font-family: 'Pattaya', sans-serif;
+  font-size: 1.4rem;
+  color: #260104;
+}
+
+.input-todo button{
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: #8C030E;
+  padding: 0.8rem;
+  height: 4rem;
+  width: 6rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 1s;
+}
+
+.input-todo button:hover{
+  background: #a80210;
+}
+
+
+
+/* Reponsividade */
+
+@media(min-width: 700px){
+  .link-social a:nth-child(1){
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-radius: 8px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .link-social a:nth-child(2){  
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-radius: 8px;
+  }  
+}
+
+@media(min-width: 601px){
+  .link-social a:nth-child(1){
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: 8px;
   }
+  
+  .link-social a:nth-child(2){  
+    padding: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: 8px;
+  }  
+}
+
+@media(max-width: 600px){
+  body{
+    background: #ECE5E5;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 40vh ;
+    grid-template-areas: "l l"
+                          "d d"
+  }
+  .conteudo{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .Welcome{
+    border-radius: initial;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+  }
+  
+  .Welcome h1{
+    font-size: 5.5rem;
+    margin-top: 2rem;
+  }
+  .Welcome p{
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+    width: 29rem;
+  
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 1px black;
+  } 
+  .link-social a:nth-child(1){
+    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 8px;
+  }
+  
+  .link-social a:nth-child(2){  
+    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 8px;
+  }  
 }
