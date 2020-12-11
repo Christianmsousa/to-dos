@@ -13,9 +13,9 @@
 ## Imagens
 
 
-<img src="https://i.imgur.com/OqfAJqK.png" width="500px;"/>
+<img src="https://i.imgur.com/OqfAJqK.png" width="500px;"/> <br/>
 
-<img src="https://i.imgur.com/BoEYfZu.png" width="500px;"/>
+<img src="https://i.imgur.com/BoEYfZu.png" width="500px;"/> <br/>
 
 <img src="https://i.imgur.com/4NB37p7.png" width="500px;"/>
 
